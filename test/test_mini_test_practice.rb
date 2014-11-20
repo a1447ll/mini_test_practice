@@ -5,7 +5,16 @@ class TestMiniTestPractice < MiniTest::Unit::TestCase
     refute_nil ::MiniTestPractice::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def setup 
+    @my_class = ::MiniTestPractice::MyClass.new
+  end
+
+  def teardown 
+    @my_class = nil
+  end
+
+  def test_odd?
+    assert_equal true, @my_class.odd?(1)
+    assert_equal false, @my_class.odd?(2)
   end
 end
