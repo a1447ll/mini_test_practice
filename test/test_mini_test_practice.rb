@@ -20,7 +20,7 @@ class TestMiniTestPractice < MiniTest::Unit::TestCase
 
 
   def test_check_number?
-    assert_equal false, @my_class.check_number?(1000)
+    assert_equal true, @my_class.check_number?(1000)
     assert_equal false, @my_class.check_number?(9999)
     assert_equal false, @my_class.check_number?(999)
     assert_equal false, @my_class.check_number?(10000)
